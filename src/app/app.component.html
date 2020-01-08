@@ -1,0 +1,4 @@
+<app-csv (getData)="senddata($event)" *ngIf="status"></app-csv>
+<router-outlet>
+  <app-table [tabledata]="data"></app-table>
+</router-outlet>

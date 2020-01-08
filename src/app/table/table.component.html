@@ -1,0 +1,25 @@
+<div *ngIf="tabledata">
+    <h2>Total={{total}}</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Source</th>
+        <th>Recipient</th>
+        <th>Amount</th>
+        <th>Schedule</th>
+        <th>Reference</th>
+    </tr>
+    <tr *ngFor="let s of tabledata">
+        <td>{{s.Name}}</td>
+        <td>{{s.Email}}</td>
+        <td>{{s.Phone}}</td>
+        <td >{{s.Account}}</td>
+        <td>{{s.Recipient}}</td>
+        <td contenteditable='true' (click)="onRowClick($event)">{{s.Amount}}</td>
+        <td>{{s.Schedule}}</td>
+        <td>{{s.Reference}}</td>
+    </tr>
+</table>
+</div>
